@@ -1,0 +1,34 @@
+// user@ubuntu-bind-kea:/etc/kea$ sudo cat kea-dhcp4.conf
+{
+    "Dhcp4": {
+        "interfaces-config": {
+            "interfaces": [ "ens3" ],
+            "dhcp-socket-type": "raw"
+        },
+        "valid-lifetime": 4000,
+        "renew-timer": 1000,
+        "rebind-timer": 2000,
+        "subnet4": [{
+           "pools": [ { "pool": "192.168.51.21-192.168.51.30",
+           "option-data": [
+                        {
+                            "name": "domain-name-servers",
+                            "data": "9.9.9.9"
+                        },
+                        {
+                            "name": "routers",
+                            "data": "192.168.51.1"
+                        }
+                    ]
+           } ],
+           "subnet": "192.168.51.0/24",
+           "id": 1
+        }],
+
+       "loggers": [{
+            "name": "*",
+            "severity": "DEBUG"
+        }]
+    }
+
+}

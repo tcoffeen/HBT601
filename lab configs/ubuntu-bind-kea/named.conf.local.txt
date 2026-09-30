@@ -1,0 +1,18 @@
+user@ubuntu-bind-kea:/etc/bind$ sudo cat named.conf.local
+//
+// Do any local configuration here
+//
+
+zone "hexabuild.net" {
+        type primary;
+        file "/etc/bind/zones/db.hexabuild.net";
+};
+
+zone "2.3.d.1.1.0.0.3.0.0.d.1.f.f.f.3.ip6.arpa" {
+    type master;
+    file "/etc/bind/zones/db.3fff:1d00:3001:1d32";
+};
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";

@@ -1,0 +1,28 @@
+## user@WebServer:/etc/nginx/sites-enabled$ sudo cat /etc/nginx/sites-enabled/default
+##
+# Default server configuration
+#
+server {
+        listen 80 default_server;
+        # listen [::]:80;
+        root /var/www/html;
+        index index.html;
+        server_name _;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+#
+# Virtual Host configuration
+#
+server {
+        # listen 80;
+        listen [::]:80;
+        server_name ipv6-only;
+        root /var/www/html/;
+        index ipv6-only.hexabuild.net.html;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}

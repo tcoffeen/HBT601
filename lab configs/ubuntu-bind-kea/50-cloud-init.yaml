@@ -1,0 +1,26 @@
+# user@ubuntu-bind-kea:/etc/netplan$ sudo cat 50-cloud-init.yaml
+# 
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+  version: 2
+  ethernets:
+    ens3:
+      dhcp4: no
+      dhcp6: no
+      addresses:
+        - 3fff:1d00:3001:1d32::153/64
+        - 192.168.50.153/24
+      accept-ra: no
+      nameservers:
+        addresses:
+          - 1.1.1.1
+          - 2001:4860:4860::8888
+      routes:
+          - to: "::/0"
+            via: "FE80::5200:FF:FE02:1"
+          - to: "0.0.0.0/0"
+            via: "192.168.50.1"

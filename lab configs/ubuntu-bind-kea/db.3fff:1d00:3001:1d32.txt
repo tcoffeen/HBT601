@@ -1,0 +1,16 @@
+; user@ubuntu-bind-kea:/etc/bind/zones$ sudo cat db.3fff\:1d00\:3001\:1d32
+;
+; BIND reverse data file for 3fff:9d0:a000:1d32::/64
+;
+$TTL    604800
+@       IN      SOA     example.com. root.example.com. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+	IN	NS	ns1.example.com.
+$ORIGIN 0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.3.d.1.1.0.0.3.0.0.d.1.f.f.f.3.ip6.arpa.
+2.0	IN	PTR	ns1.example.com.
+3.0	IN	PTR	ipv6-only.example.com.

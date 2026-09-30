@@ -1,0 +1,18 @@
+; user@ubuntu-bind-kea:/etc/bind/zones$ sudo cat db.hexabuild.net
+;
+; BIND data file for hexabuild.net
+;
+$TTL	604800
+@	IN	SOA	hexabuild.net. root.hexabuild.net. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+
+	IN	NS	ns1.hexabuild.net.
+ns1.hexabuild.net.	IN	A	192.168.50.153
+			IN	AAAA	3fff:1d00:3001:1d32::153
+
+www			IN	A	192.168.50.80
+ipv6-only		IN	AAAA	3fff:1d00:3001:1d32::80
