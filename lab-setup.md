@@ -4,7 +4,7 @@ The instructor lab runs in EVE-NG Professional (version 7.2.0-4-PRO).
 
 Node Images in use:
 
-* **NPTv6_GW:** *csr1000vng-universalk9.16.03.09*
+* **NPTv6_GW:** *vyos-2026.09.30-1921-rolling-generic-amd64*
 * **R1:** *vios-adventerprisek9-m.spa.158-3.m2*
 * **R2:** *vyos-2025.11.30-0023-rolling-generic-amd64*
 * **Infoblox:** *infoblox-ddi-9.0.3*
