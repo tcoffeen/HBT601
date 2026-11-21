@@ -12,7 +12,7 @@ $TTL	604800
 
 	IN	NS	ns1.hexabuild.net.
 ns1.hexabuild.net.	IN	A	192.168.50.153
-			IN	AAAA	3fff:1d00:3001:1d32::153
+			IN	AAAA	3fff:d00:3001:1d32::153
 
 www			IN	A	192.168.50.80
-ipv6-only		IN	AAAA	3fff:1d00:3001:1d32::80
+ipv6-only		IN	AAAA	3fff:d00:3001:1d32::80

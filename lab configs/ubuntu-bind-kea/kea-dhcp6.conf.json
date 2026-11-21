@@ -2,7 +2,7 @@
 {
   "Dhcp6": {
     "interfaces-config": {
-      "interfaces": [ "ens3/3fff:1d00:3001:1d32::153" ]
+      "interfaces": [ "ens3/3fff:d00:3001:1d32::153" ]
     },
     "lease-database": {
       "type": "memfile",
@@ -22,12 +22,12 @@
     "subnet6": [
       {
 	"id": 1024,
-        "subnet": "3fff:1d00:3001:1d33::/64",
+        "subnet": "3fff:d00:3001:1d33::/64",
 	"interface": "ens3",
         "rapid-commit": true,
         "pools": [
           {
-            "pool": "3fff:1d00:3001:1d33::20 - 3fff:1d00:3001:1d33::2f"
+            "pool": "3fff:d00:3001:1d33::20 - 3fff:d00:3001:1d33::2f"
           }
         ]
       }
